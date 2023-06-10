@@ -1,29 +1,25 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
+import { AppComponent } from "./app.component";
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+describe(AppComponent.name, () => {
+    let fixture!: ComponentFixture<AppComponent>
+    let component!: AppComponent
 
-  it(`should have as title 'decimoTerceiroProjeto'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('decimoTerceiroProjeto');
-  });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [AppComponent]
+        }).compileComponents();
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('decimoTerceiroProjeto app is running!');
-  });
+        fixture = TestBed.createComponent(AppComponent);
+        component = fixture.componentInstance;
+    });
+
+    it('Should create component', () => {
+        expect(component).toBeTruthy();
+    });
+
+    it("Should have as title 'Designing & Building'", () => {
+        expect(component.title).toBe("Designing & Building");
+    });
 });
