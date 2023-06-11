@@ -2,3 +2,11 @@
 
 @import "./abstracts/reset";
 @import "./abstracts/variables";
+
+body {
+    background-color: $cor-branco;
+    box-sizing: border-box;
+    font: normal $font-weigth $font-size $font-family;
+    min-height: 100vh;
+    width: 100vw;
+}

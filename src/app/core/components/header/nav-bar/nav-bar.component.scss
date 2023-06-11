@@ -1,0 +1,36 @@
+@import '../../../../../abstracts/variables';
+
+nav {
+    background-color: $cor-branco;
+    left: 30%;
+    position: absolute;
+    top: 0;
+    ul {
+        align-items: center;
+        column-gap: 2rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 2rem;
+    }
+    li {
+        transition: color .4s ease-in-out;
+        &:hover, &:focus-within {
+            color: $cor-hover;
+        }
+        a {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            &:active {
+                color: $cor-hover;
+            }
+        }
+        #tel {
+            font-size: 18px;
+            font-weight: 500;
+            span {
+                margin-left: .5rem;
+            }
+        }
+    }
+}
