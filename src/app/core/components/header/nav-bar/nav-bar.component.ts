@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { faMobile } from '@fortawesome/free-solid-svg-icons';
-import { openNavBar } from 'src/animations/menuBars';
+import { openNavBar } from 'src/app/shared/animations/menuBars';
 
 @Component({
   selector: 'app-nav-bar',

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
-import { bottomBar, hamburguerMenuX, topBar } from 'src/animations/menuBars';
-import { MouseEvents } from 'src/interfaces/MouseEvents';
+import { bottomBar, hamburguerMenuX, topBar } from 'src/app/shared/animations/menuBars';
+import { MouseEvents } from 'src/app/shared/interfaces/MouseEvents';
 
 
 @Component({
