@@ -36,16 +36,16 @@ export const hamburguerMenuX = trigger('hamburguerMenuX', [
         width: '100%'
     })),
     state('topBar', style({
-        transform: 'rotate(45deg)',
-        transformOrigin: 'left',
-        margin: '6px',
+        transform: 'rotate(45deg) translate(-3px, -16px)',
+        transformOrigin: 'left center',
+        margin: '6px'
     })),
     state('middleBar', style({
         opacity: 0
     })),
     state('bottomBar', style({
-        transform: 'rotate(-45deg)',
-        transformOrigin: 'left',
+        transform: 'rotate(-45deg) translate(7px, 8px)',
+        transformOrigin: 'left center',
         margin: '6px',
     })),
     transition('* => *', [
