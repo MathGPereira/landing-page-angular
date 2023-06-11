@@ -1,5 +1,5 @@
-<div class="hamburguer-menu">
-    <div class="bar top-bar"></div>
+<div class="hamburguer-menu" (mouseover)="mouse = true" (mouseout)="mouse = false">
+    <div class="bar top-bar" [@topBar]="mouse === true ? 'hover': 'default'" ></div>
     <div class="bar middle-bar"></div>
-    <div class="bar bottom-bar"></div>
+    <div class="bar bottom-bar" [@bottomBar]="mouse === true ? 'hover': 'default'"></div>
 </div>

@@ -14,22 +14,15 @@
         height: 1.5px;
         position: absolute;
         transform: translateY(-50%);
-        transition: all 1s ease-in-out;
         width: 100%;
     }
     .top-bar {
-        top: 35%;
-        width: 0;
+        top: 33%;
     }
     .middle-bar {
         top: 50%;
-        width: 100%;
     }
     .bottom-bar {
-        top: 65%;
-        width: 60%;
-    }
-    &:hover ~ .top-bar {
-        width: 100%;
+        top: 66%;
     }
 }
