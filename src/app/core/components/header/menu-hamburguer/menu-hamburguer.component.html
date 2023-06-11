@@ -1,5 +1,38 @@
-<div class="hamburguer-menu" (mouseover)="mouse = true" (mouseout)="mouse = false">
-    <div class="bar top-bar" [@topBar]="mouse === true ? 'hover': 'default'" ></div>
+<div
+    class="hamburguer-menu"
+    (mouseover)="modifyMouseStatus()"
+    (mouseout)="modifyMouseStatus()"
+    (click)="modifyClickStatus()"
+    *ngIf="!mouseState.mouseClick; else cancelHamburguerMenu"
+    >
+    <div
+        class="bar top-bar"
+        [@topBar]="mouseState.mouseOverOut === true ? 'hover': 'default'"
+    ></div>
     <div class="bar middle-bar"></div>
-    <div class="bar bottom-bar" [@bottomBar]="mouse === true ? 'hover': 'default'"></div>
+    <div
+        class="bar bottom-bar"
+        [@bottomBar]="mouseState.mouseOverOut === true ? 'hover': 'default'"
+    ></div>
 </div>
+<ng-template #cancelHamburguerMenu>
+    <div
+        class="hamburguer-menu"
+        (mouseover)="modifyMouseStatus()"
+        (mouseout)="modifyMouseStatus()"
+        (click)="modifyClickStatus()"
+        >
+        <div
+            class="bar top-bar"
+            [@hamburguerMenuX]="!mouseState.mouseClick === true ? 'hamburguer' : 'topBar'"
+        ></div>
+        <div
+            class="bar middle-bar"
+            [@hamburguerMenuX]="!mouseState.mouseClick === true ? 'hamburguer' : 'middleBar'"
+        ></div>
+        <div
+            class="bar bottom-bar"
+            [@hamburguerMenuX]="!mouseState.mouseClick === true ? 'hamburguer' : 'bottomBar'"
+        ></div>
+    </div>
+</ng-template>

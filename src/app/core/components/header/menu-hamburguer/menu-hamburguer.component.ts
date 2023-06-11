@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { bottomBar, topBar } from 'src/app/animations/animations';
+import { Component } from '@angular/core';
+
+import { bottomBar, hamburguerMenuX, topBar } from 'src/animations/menuBars';
+import { MouseEvents } from 'src/interfaces/MouseEvents';
 
 
 @Component({
@@ -8,10 +10,22 @@ import { bottomBar, topBar } from 'src/app/animations/animations';
     styleUrls: ['./menu-hamburguer.component.scss'],
     animations: [
         topBar,
-        bottomBar
+        bottomBar,
+        hamburguerMenuX
     ]
 })
 export class MenuHamburguerComponent {
 
-    @Input() mouse: boolean = false;
+    protected mouseState: MouseEvents = {
+        mouseOverOut: false,
+        mouseClick: false
+    };
+
+    protected modifyClickStatus(): void {
+        this.mouseState.mouseClick = !this.mouseState.mouseClick;
+    }
+
+    protected modifyMouseStatus(): void {
+        this.mouseState.mouseOverOut = !this.mouseState.mouseOverOut;
+    }
 }
