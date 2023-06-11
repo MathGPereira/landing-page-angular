@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import { bottomBar, hamburguerMenuX, topBar } from 'src/animations/menuBars';
 import { MouseEvents } from 'src/interfaces/MouseEvents';
@@ -16,16 +16,22 @@ import { MouseEvents } from 'src/interfaces/MouseEvents';
 })
 export class MenuHamburguerComponent {
 
-    protected mouseState: MouseEvents = {
+    @Output() public openOff = new EventEmitter<void>();
+    public mouseState: MouseEvents = {
         mouseOverOut: false,
         mouseClick: false
     };
 
-    protected modifyClickStatus(): void {
+    public modifyClickStatus(): void {
         this.mouseState.mouseClick = !this.mouseState.mouseClick;
+        this.openNavBar();
     }
 
-    protected modifyMouseStatus(): void {
+    public modifyMouseStatus(): void {
         this.mouseState.mouseOverOut = !this.mouseState.mouseOverOut;
+    }
+
+    private openNavBar(): void {
+        this.openOff.emit();
     }
 }

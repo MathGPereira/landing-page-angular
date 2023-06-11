@@ -1,7 +1,11 @@
-<header class="header" role="header">
+<header
+    class="header"
+    role="header">
     <h1>
         <img src="../../../../assets/images/logo-inverse-440x84.png" alt role="button" aria-label="Home">
     </h1>
-    <app-menu-hamburguer></app-menu-hamburguer>
-    <app-nav-bar></app-nav-bar>
+    <app-menu-hamburguer (openOff)="openNavBar()"></app-menu-hamburguer>
+    <app-nav-bar
+        [navBar]="navBar"
+    ></app-nav-bar>
 </header>

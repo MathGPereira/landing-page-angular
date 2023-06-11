@@ -36,7 +36,7 @@ export const hamburguerMenuX = trigger('hamburguerMenuX', [
         width: '100%'
     })),
     state('topBar', style({
-        transform: 'rotate(45deg) translate(-3px, -16px)',
+        transform: 'rotate(45deg) translate(-2px, -17px)',
         transformOrigin: 'left center',
         margin: '6px'
     })),
@@ -50,5 +50,17 @@ export const hamburguerMenuX = trigger('hamburguerMenuX', [
     })),
     transition('* => *', [
         animate(200)
+    ])
+]);
+
+export const openNavBar = trigger('openNavBar', [
+    state('default', style({
+        top: '-200px'
+    })),
+    state('open', style({
+        top: '0'
+    })),
+    transition('* => *', [
+        animate('1s cubic-bezier(0.65, 0, 0.35, 1)')
     ])
 ]);
