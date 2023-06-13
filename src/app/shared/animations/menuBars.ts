@@ -1,4 +1,4 @@
-import { trigger, state, style, animate, transition, query, group } from '@angular/animations';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 
 export const topBar = trigger('topBar', [
