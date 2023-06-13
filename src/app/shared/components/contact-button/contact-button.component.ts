@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
-import { animatedBorder } from '../../animations/buttonContact';
+
+import { rightBorder, topBorder, bottomBorder, leftBorder } from '../../animations/buttonContact';
 
 @Component({
   selector: 'app-contact-button',
   templateUrl: './contact-button.component.html',
   styleUrls: ['./contact-button.component.scss'],
-  animations: [animatedBorder]
+  animations: [
+    topBorder,
+    rightBorder,
+    bottomBorder,
+    leftBorder
+]
 })
 export class ContactButtonComponent {
 
+    mouseOver = false;
+
+    public changeMouseState(): void {
+        this.mouseOver = !this.mouseOver;
+    }
 }

@@ -1,88 +1,20 @@
 @import '../../../../abstracts/variables';
 
 button {
+    border-left: 1px solid $cor-hover;
+    border-right: 1px solid $cor-hover;
     color: $cor-branco;
     cursor: pointer;
     font-weight: 900;
     margin: 1rem;
-    overflow: hidden;
     padding: 1rem 3rem;
     position: relative;
     text-transform: uppercase;
+    &:hover {
+        border: none;
+    }
 }
 
 button span {
     position: absolute;
-}
-
-button span:nth-child(1) {
-    animation: animar1 2s ease-in 1s infinite;
-    background-image: linear-gradient(to right, $cor-hover, $cor-hover);
-    height: 2px;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-@keyframes animar1 {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-button span:nth-child(2) {
-    animation: animar2 2s ease-in .8s infinite;
-    background-image: linear-gradient(to bottom, $cor-hover, $cor-hover);
-    height: 100%;
-    right: 0;
-    top: 0;
-    width: 2px;
-}
-
-@keyframes animar2 {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100%);
-    }
-}
-
-button span:nth-child(3) {
-    animation: animar3 2s ease-in 2.3s infinite;
-    background-image: linear-gradient(to left, $cor-hover, $cor-hover);
-    bottom: 0;
-    height: 2px;
-    right: 0;
-    width: 100%;
-}
-
-@keyframes animar3 {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-button span:nth-child(4) {
-    animation: animar4 2s ease-in 3.5s infinite;
-    background-image: linear-gradient(to top, $cor-hover, $cor-hover);
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    width: 2px;
-}
-
-@keyframes animar4 {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
 }

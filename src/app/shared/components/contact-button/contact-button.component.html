@@ -1,7 +1,10 @@
-<button>
-    <span></span>
-    <span></span>
+<button
+    (mouseover)="changeMouseState()"
+    (mouseout)="changeMouseState()"
+    >
+    <span [@topBorder]="mouseOver ? 'topBorderAnimated' : 'default'"></span>
+    <span [@rightBorder]="!mouseOver ? 'rightBorderAnimated' : 'default'"></span>
     Contact us
-    <span></span>
-    <span></span>
+    <span [@bottomBorder]="!mouseOver ? 'bottomBorderAnimated' : 'default'"></span>
+    <span [@leftBorder]="!mouseOver ? 'leftBorderAnimated' : 'default'"></span>
 </button>
