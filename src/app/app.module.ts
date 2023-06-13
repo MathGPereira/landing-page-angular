@@ -6,10 +6,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './core/components/header/header.module';
+import { ContactsComponent } from './core/components/contacts/contacts.component';
+import { ContactButtonComponent } from './shared/components/contact-button/contact-button.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactsComponent,
+    ContactButtonComponent
   ],
   imports: [
     BrowserModule,
