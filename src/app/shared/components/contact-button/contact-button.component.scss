@@ -1,0 +1,10 @@
+@import '../../../../abstracts/variables';
+
+button {
+    border: 1px solid $cor-hover;
+    color: $cor-branco;
+    cursor: pointer;
+    font-weight: 900;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+}
