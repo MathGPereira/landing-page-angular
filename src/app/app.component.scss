@@ -1,4 +1,4 @@
-@import "../abstracts/variables";
+@import "../app/core/abstracts/variables";
 
 .principal {
     background: url('../assets/images/bg-image-1.jpg');
@@ -7,7 +7,7 @@
     div {
         box-sizing: border-box;
         padding: 2rem 0 2rem 4rem;
-        width: 29%;
+        width: 33.33%;
     }
     h2 {
         color: $cor-branco;

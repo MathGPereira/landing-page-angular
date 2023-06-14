@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './core/components/header/header.module';
 import { ContactsComponent } from './core/components/contacts/contacts.component';
 import { ContactButtonComponent } from './shared/components/contact-button/contact-button.component';
+import { CarouselComponent } from './core/components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
-    ContactButtonComponent
+    ContactButtonComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

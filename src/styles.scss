@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@import "./abstracts/reset";
-@import "./abstracts/variables";
+@import "./app/core/abstracts/reset";
+@import "./app/core/abstracts/variables";
 
 body {
     background-color: $cor-branco;
