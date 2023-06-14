@@ -1,4 +1,26 @@
+@import "../abstracts/variables";
+
 .principal {
     background: url('../assets/images/bg-image-1.jpg');
+    box-sizing: border-box;
+    width: 100vw;
+    div {
+        box-sizing: border-box;
+        padding: 2rem 0 2rem 4rem;
+        width: 29%;
+    }
+    h2 {
+        color: $cor-branco;
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    p {
+        color: $cor-hover;
+        font-size: 15px;
+        font-weight: 700;
+        margin: 2.5rem 0 2.5rem 9rem;
+        text-transform: uppercase;
+        width: 45%;
+    }
 }
-
