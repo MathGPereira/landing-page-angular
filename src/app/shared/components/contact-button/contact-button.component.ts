@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { rightBorder, topBorder, bottomBorder, leftBorder } from '../../animations/buttonContact';
+import { rightBorder, topBorder, bottomBorder, leftBorder } from '../../animations/contactButton';
 
 @Component({
   selector: 'app-contact-button',

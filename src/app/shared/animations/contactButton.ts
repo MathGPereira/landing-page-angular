@@ -15,7 +15,7 @@ export const topBorder = trigger('topBorder', [
         top: '0',
         left: '100%'
     })),
-    transition('default => topBorderAnimated', [
+    transition('default <=> topBorderAnimated', [
         animate('1s')
     ])
 ]);
@@ -34,7 +34,7 @@ export const bottomBorder = trigger('bottomBorder', [
         height: '1.2px',
         right: '100%'
     })),
-    transition('bottomBorderAnimated => default', [
+    transition('bottomBorderAnimated <=> default', [
         animate('1s')
     ])
 ]);
@@ -54,7 +54,7 @@ export const rightBorder = trigger('rightBorder', [
         top: '0',
         width: '1.2px'
     })),
-    transition('* => default', [
+    transition('rightBorderAnimated <=> default', [
         animate('1s')
     ])
 ]);
@@ -74,7 +74,7 @@ export const leftBorder = trigger('leftBorder', [
         left: '0',
         width: '1.2px'
     })),
-    transition('leftBorderAnimated => *', [
+    transition('leftBorderAnimated <=> *', [
         animate('1s')
     ])
 ]);

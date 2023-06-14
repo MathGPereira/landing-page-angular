@@ -1,8 +1,6 @@
 @import '../../../../abstracts/variables';
 
 button {
-    border-left: 1px solid $cor-hover;
-    border-right: 1px solid $cor-hover;
     color: $cor-branco;
     cursor: pointer;
     font-weight: 900;
@@ -10,9 +8,6 @@ button {
     padding: 1rem 3rem;
     position: relative;
     text-transform: uppercase;
-    &:hover {
-        border: none;
-    }
 }
 
 button span {
