@@ -1,1 +1,13 @@
-<app-controls></app-controls>
+<section role="section">
+    <ul>
+        <li *ngFor="let slide of slides">
+            <app-slides
+                [src]="slide.src"
+                [firstDescription]="slide.firstDescription"
+                [secondDescription]="slide.secondDescription"
+                [thirdDescription]="slide.thirdDescription"
+            ></app-slides>
+        </li>
+    </ul>
+    <app-controls></app-controls>
+</section>

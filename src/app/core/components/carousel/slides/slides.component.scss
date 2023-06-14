@@ -1,0 +1,40 @@
+@import '../../../abstracts/variables';
+
+article {
+    box-sizing: border-box;
+    max-width: 100%;
+    img {
+        min-height: 100%;
+        object-fit: contain;
+        width: 100%;
+    }
+    .article__description {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+        width: 100%;
+        p {
+            color: $cor-hover;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        #works {
+            color: #c4c4c41a;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: .6rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        #firstDescription {
+            color: $cor-branco;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

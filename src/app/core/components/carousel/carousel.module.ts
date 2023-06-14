@@ -3,15 +3,20 @@ import { NgModule } from "@angular/core";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 import { ControlsComponent } from './controls/controls.component';
+import { SlidesComponent } from './slides/slides.component';
 
 @NgModule({
     declarations: [
-        ControlsComponent
+        ControlsComponent,
+        SlidesComponent
     ],
     imports: [
         CommonModule,
         FontAwesomeModule
     ],
-    exports: [ControlsComponent]
+    exports: [
+        ControlsComponent,
+        SlidesComponent
+    ]
 })
 export class CarouselModule { }

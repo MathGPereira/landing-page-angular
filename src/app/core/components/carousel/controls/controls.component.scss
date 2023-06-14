@@ -2,9 +2,12 @@
 
 div {
     background-color: $cor-hover;
+    bottom: 5%;
     box-sizing: border-box;
+    left: 13%;
     padding: 2rem;
     position: absolute;
+    transform: translateY(-50%);
     button {
         border: 1px solid $cor-branco;
         border-radius: 50%;
