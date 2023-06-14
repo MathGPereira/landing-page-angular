@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-controls',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class ControlsComponent {
 
+    public fonts = {
+        faArrowLeft,
+        faArrowRight
+    }
 }

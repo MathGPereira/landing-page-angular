@@ -1,5 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+
 import { ControlsComponent } from './controls/controls.component';
 
 @NgModule({
@@ -7,8 +9,9 @@ import { ControlsComponent } from './controls/controls.component';
         ControlsComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        FontAwesomeModule
     ],
-    exports: []
+    exports: [ControlsComponent]
 })
 export class CarouselModule { }

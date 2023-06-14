@@ -1,0 +1,25 @@
+@import '../../../abstracts/variables';
+
+div {
+    background-color: $cor-hover;
+    box-sizing: border-box;
+    padding: 2rem;
+    position: absolute;
+    button {
+        border: 1px solid $cor-branco;
+        border-radius: 50%;
+        color: $cor-branco;
+        cursor: pointer;
+        padding: 1.5rem 1.7rem;
+        .icon {
+            font-size: 18px;
+            transition: color .3s linear;
+        }
+        &:hover > .icon {
+            color: #ffffff57;
+        }
+    }
+    #arrowLeft {
+        margin-right: 1rem;
+    }
+}
