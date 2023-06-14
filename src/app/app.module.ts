@@ -9,6 +9,7 @@ import { HeaderModule } from './core/components/header/header.module';
 import { ContactsComponent } from './core/components/contacts/contacts.component';
 import { ContactButtonComponent } from './shared/components/contact-button/contact-button.component';
 import { CarouselComponent } from './core/components/carousel/carousel.component';
+import { CarouselModule } from './core/components/carousel/carousel.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarouselComponent } from './core/components/carousel/carousel.component
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    HeaderModule
+    HeaderModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
