@@ -2,6 +2,7 @@
     <ul>
         <li *ngFor="let slide of slides">
             <app-slides
+                *ngIf="slide.id === activeImageIndex + 1"
                 [src]="slide.src"
                 [firstDescription]="slide.firstDescription"
                 [secondDescription]="slide.secondDescription"
