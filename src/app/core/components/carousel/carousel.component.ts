@@ -1,11 +1,14 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 
+import { carouselImage } from 'src/app/shared/animations/carousel/carouselImage';
+
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.scss'],
+  animations: [carouselImage]
 })
 export class CarouselComponent implements OnInit, OnDestroy {
 
@@ -52,7 +55,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
     }
 
     private timerInit(): void {
-        this.timerSubscription = timer(5000).subscribe(() => {
+        this.timerSubscription = timer(1000).subscribe(() => {
             this.activeImage(this.activeImageIndex + 1)
         });
     }

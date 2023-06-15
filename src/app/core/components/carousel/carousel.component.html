@@ -1,6 +1,15 @@
-<section role="section">
+<section
+    role="section"
+    [@carouselImage]>
     <ul>
-        <li *ngFor="let slide of slides">
+        <li
+            *ngFor="let slide of slides">
+            <img
+                *ngFor="let slide of slides"
+                [src]="slide.src"
+                width="1"
+                height="1"
+                style="opacity: 0; position: fixed;">
             <app-slides
                 *ngIf="slide.id === activeImageIndex + 1"
                 [src]="slide.src"
