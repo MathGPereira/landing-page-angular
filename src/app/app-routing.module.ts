@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { CarouselComponent } from './core/components/carousel/carousel.component';
+import { SlidesComponent } from './core/components/carousel/slides/slides.component';
+
+const routes: Routes = [
+    {
+        path: '',
+        pathMatch: 'full',
+        component: CarouselComponent,
+        children: [{ path: '', component: SlidesComponent }]
+    }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,22 +1,15 @@
 <section
-    role="section"
-    [@carouselImage]>
+    role="section">
     <ul>
-        <li
-            *ngFor="let slide of slides">
-            <img
-                *ngFor="let slide of slides"
-                [src]="slide.src"
-                width="1"
-                height="1"
-                style="opacity: 0; position: fixed;">
-            <app-slides
+        <li>
+            <router-outlet></router-outlet>
+            <!-- <app-slides
                 *ngIf="slide.id === activeImageIndex + 1"
                 [src]="slide.src"
                 [firstDescription]="slide.firstDescription"
                 [secondDescription]="slide.secondDescription"
                 [thirdDescription]="slide.thirdDescription"
-            ></app-slides>
+            ></app-slides> -->
         </li>
     </ul>
     <app-controls></app-controls>
