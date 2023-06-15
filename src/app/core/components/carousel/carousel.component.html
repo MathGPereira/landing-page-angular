@@ -2,14 +2,9 @@
     role="section">
     <ul>
         <li>
-            <router-outlet></router-outlet>
-            <!-- <app-slides
-                *ngIf="slide.id === activeImageIndex + 1"
-                [src]="slide.src"
-                [firstDescription]="slide.firstDescription"
-                [secondDescription]="slide.secondDescription"
-                [thirdDescription]="slide.thirdDescription"
-            ></app-slides> -->
+            <router-outlet
+                [@routeAnimations]="getRouteAnimationData()"
+            ></router-outlet>
         </li>
     </ul>
     <app-controls></app-controls>

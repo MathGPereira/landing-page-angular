@@ -9,7 +9,11 @@ const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: CarouselComponent,
-        children: [{ path: '', component: SlidesComponent }]
+        children: [{
+            path: '',
+            component: SlidesComponent,
+            data: {animation: 'routeAnimations'}
+        }]
     }
 ];
 

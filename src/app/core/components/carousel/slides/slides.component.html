@@ -7,13 +7,13 @@
         style="opacity: 0; position: fixed;"
     >
     <img
-        [src]="slides[activeImageIndex + 1].src"
+        [src]="slides[activeImageIndex].src"
         alt="Exemplo de um design de uma casa que está sendo demonstrada no site"
     >
     <div class="article__description">
         <p id="works">54+ works</p>
-        <p id="firstDescription">{{ slides[activeImageIndex + 1].firstDescription }}</p>
-        <p>{{ slides[activeImageIndex + 1].secondDescription }}</p>
-        <p>{{ slides[activeImageIndex + 1].thirdDescription }}</p>
+        <p id="firstDescription">{{ slides[activeImageIndex].firstDescription }}</p>
+        <p>{{ slides[activeImageIndex].secondDescription }}</p>
+        <p>{{ slides[activeImageIndex].thirdDescription }}</p>
     </div>
 </article>

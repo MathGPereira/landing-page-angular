@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ControlsComponent } from './controls/controls.component';
 import { SlidesComponent } from './slides/slides.component';
@@ -12,7 +13,8 @@ import { SlidesComponent } from './slides/slides.component';
     ],
     imports: [
         CommonModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        BrowserAnimationsModule
     ],
     exports: [
         ControlsComponent,
