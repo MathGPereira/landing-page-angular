@@ -1,7 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription, timer } from 'rxjs';
+import { Component } from '@angular/core';
 
-import { opacityAnimations } from 'src/app/shared/animations/opacityAnimations';
+import { opacityAnimations, positionAnimation } from 'src/app/shared/animations/carouselAnimations';
 
 
 @Component({
@@ -9,12 +8,12 @@ import { opacityAnimations } from 'src/app/shared/animations/opacityAnimations';
   templateUrl: './slides.component.html',
   styleUrls: ['./slides.component.scss'],
   animations: [
-    opacityAnimations
+    opacityAnimations,
+    positionAnimation
   ]
 })
-export class SlidesComponent implements OnInit, OnDestroy {
+export class SlidesComponent {
 
-    private timerSubscription!: Subscription;
     private _activeImageIndex = 0;
     public state = 'default';
     public slides = [
@@ -43,17 +42,18 @@ export class SlidesComponent implements OnInit, OnDestroy {
 
     constructor() { }
 
-    public ngOnInit(): void {
-        this.timerInit();
-    }
-
-    public ngOnDestroy(): void {
-        this.timerFinish();
-    }
-
     public changeImage(value: number): void {
-        (this.activeImageIndex < 2 && value === 1) ? this.activeImageIndex += 1 : this.activeImageIndex = 0;
-        (this.activeImageIndex > 0 && value === -1) ? this.activeImageIndex -= 1 : this.activeImageIndex = 2;
+        if(value === 1) {
+            (this.activeImageIndex < 2) ? this.activeImageIndex += 1 : this.activeImageIndex = 0;
+            return;
+        }
+
+        (this.activeImageIndex > 0) ? this.activeImageIndex -= 1 : this.activeImageIndex = 2;
+        return;
+    }
+
+    public getActiveImageIndex(): number {
+        return this._activeImageIndex;
     }
 
     get activeImageIndex(): number {
@@ -62,21 +62,5 @@ export class SlidesComponent implements OnInit, OnDestroy {
 
     set activeImageIndex(value: number) {
         this._activeImageIndex = value < this.slides.length ? value : 0;
-    }
-
-    private timerInit(): void {
-        this.state === 'default' ? this.state = 'invisible' : this.state = 'default';
-        this.timerSubscription = timer(3800).subscribe(() => {
-            this.activeImage(this.activeImageIndex + 1)
-        });
-    }
-
-    private timerFinish(): void {
-        this.timerSubscription?.unsubscribe();
-    }
-
-    private activeImage(index: number): void {
-        this.activeImageIndex = index;
-        this.timerInit();
     }
 }

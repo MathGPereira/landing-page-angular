@@ -1,21 +1,38 @@
 <article>
-    <img
-        *ngFor="let slide of slides"
-        [src]="slide.src"
-        width="1"
-        height="1"
-        style="opacity: 0; position: fixed;animation: none;"
-    >
-    <img
-        [@opacityAnimations]="state === 'default' ? 'invisible' : 'default'"
-        [src]="slides[activeImageIndex].src"
-        alt="Exemplo de um design de uma casa que está sendo demonstrada no site"
-    >
-    <div class="article__description">
-        <p id="works">54+ works</p>
-        <p id="firstDescription">{{ slides[activeImageIndex].firstDescription }}</p>
-        <p>{{ slides[activeImageIndex].secondDescription }}</p>
-        <p>{{ slides[activeImageIndex].thirdDescription }}</p>
-    </div>
+    <ng-container *ngFor="let slide of slides; let i = index">
+        <img
+            [src]="slide.src"
+            width="1"
+            height="1"
+            style="opacity: 0; position: fixed;"
+        >
+        <img
+            @opacityAnimations
+            [src]="slide.src"
+            alt="Exemplo de um design de uma casa que está sendo demonstrada no site"
+            *ngIf="i === getActiveImageIndex()"
+        >
+        <div 
+            class="article__description" 
+            *ngIf="i === getActiveImageIndex()">
+            <p id="works">54+ works</p>
+            <p
+                id="firstDescription"
+                @positionAnimation
+                >
+                {{ slide.firstDescription }}
+            </p>
+            <p
+                @positionAnimation
+                >
+                {{ slide.secondDescription }}
+            </p>
+            <p
+                @positionAnimation
+                >
+                {{ slide.thirdDescription }}
+            </p>
+        </div>
+    </ng-container>
     <app-controls (changeImage)="changeImage($event)"></app-controls>
 </article>
