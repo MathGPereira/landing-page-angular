@@ -1,17 +1,23 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
+
+import { opacityAnimations } from 'src/app/shared/animations/opacityAnimations';
 import { CarouselControlService } from 'src/app/shared/services/carousel-control.service';
 
 
 @Component({
   selector: 'app-slides',
   templateUrl: './slides.component.html',
-  styleUrls: ['./slides.component.scss']
+  styleUrls: ['./slides.component.scss'],
+  animations: [
+    opacityAnimations
+  ]
 })
 export class SlidesComponent implements OnInit, OnDestroy {
 
     private timerSubscription!: Subscription;
     private _activeImageIndex = 0;
+    public state = 'default';
     public slides = [
         {
             id: 1,
@@ -34,7 +40,7 @@ export class SlidesComponent implements OnInit, OnDestroy {
             secondDescription: '350 sq. m.',
             thirdDescription: '$ 340.000'
         }
-    ]
+    ];
 
     constructor(private carouselService: CarouselControlService) { }
 
@@ -55,7 +61,8 @@ export class SlidesComponent implements OnInit, OnDestroy {
     }
 
     private timerInit(): void {
-        this.timerSubscription = timer(5000).subscribe(() => {
+        this.timerSubscription = timer(3800).subscribe(() => {
+            this.state === 'default' ? this.state = 'invisible' : this.state = 'default';
             this.activeImage(this.activeImageIndex + 1)
         });
     }

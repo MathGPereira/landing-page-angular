@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { ChildrenOutletContexts } from '@angular/router';
 
-import { routeAnimations } from 'src/app/shared/animations/routeAnimations';
-
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'],
-  animations: [routeAnimations]
+  styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent {
 

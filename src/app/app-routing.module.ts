@@ -11,8 +11,7 @@ const routes: Routes = [
         component: CarouselComponent,
         children: [{
             path: '',
-            component: SlidesComponent,
-            data: {animation: 'routeAnimations', src: ''}
+            component: SlidesComponent
         }]
     }
 ];
