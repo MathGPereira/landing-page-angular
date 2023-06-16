@@ -7,8 +7,8 @@
         style="opacity: 0; position: fixed;animation: none;"
     >
     <img
-        [src]="slides[activeImageIndex].src"
         [@opacityAnimations]="state === 'default' ? 'invisible' : 'default'"
+        [src]="slides[activeImageIndex].src"
         alt="Exemplo de um design de uma casa que está sendo demonstrada no site"
     >
     <div class="article__description">

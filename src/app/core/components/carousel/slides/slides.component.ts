@@ -61,8 +61,8 @@ export class SlidesComponent implements OnInit, OnDestroy {
     }
 
     private timerInit(): void {
+        this.state === 'default' ? this.state = 'invisible' : this.state = 'default';
         this.timerSubscription = timer(3800).subscribe(() => {
-            this.state === 'default' ? this.state = 'invisible' : this.state = 'default';
             this.activeImage(this.activeImageIndex + 1)
         });
     }
