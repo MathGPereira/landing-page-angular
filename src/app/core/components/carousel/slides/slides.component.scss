@@ -3,6 +3,7 @@
 article {
     box-sizing: border-box;
     max-width: 100%;
+    position: relative;
     img {
         min-height: 100%;
         object-fit: contain;

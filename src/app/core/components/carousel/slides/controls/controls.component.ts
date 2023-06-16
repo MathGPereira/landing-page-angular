@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
-import { CarouselControlService } from 'src/app/shared/services/carousel-control.service';
 
 
 @Component({
@@ -11,14 +9,15 @@ import { CarouselControlService } from 'src/app/shared/services/carousel-control
 })
 export class ControlsComponent {
 
+    @Output() changeImage = new EventEmitter<number>()
     public fonts = {
         faArrowLeft,
         faArrowRight
     }
 
-    constructor(private carouselService: CarouselControlService) { }
+    constructor() { }
 
-    public changeImage(info: number): void {
-        this.carouselService.testInfo(info);
+    public arrowControl(value: number): void {
+        this.changeImage.emit(value);
     }
 }

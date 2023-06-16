@@ -17,4 +17,5 @@
         <p>{{ slides[activeImageIndex].secondDescription }}</p>
         <p>{{ slides[activeImageIndex].thirdDescription }}</p>
     </div>
+    <app-controls (changeImage)="changeImage($event)"></app-controls>
 </article>

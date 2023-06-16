@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
 
 import { opacityAnimations } from 'src/app/shared/animations/opacityAnimations';
-import { CarouselControlService } from 'src/app/shared/services/carousel-control.service';
 
 
 @Component({
@@ -42,7 +41,7 @@ export class SlidesComponent implements OnInit, OnDestroy {
         }
     ];
 
-    constructor(private carouselService: CarouselControlService) { }
+    constructor() { }
 
     public ngOnInit(): void {
         this.timerInit();
@@ -50,6 +49,11 @@ export class SlidesComponent implements OnInit, OnDestroy {
 
     public ngOnDestroy(): void {
         this.timerFinish();
+    }
+
+    public changeImage(value: number): void {
+        (this.activeImageIndex < 2 && value === 1) ? this.activeImageIndex += 1 : this.activeImageIndex = 0;
+        (this.activeImageIndex > 0 && value === -1) ? this.activeImageIndex -= 1 : this.activeImageIndex = 2;
     }
 
     get activeImageIndex(): number {

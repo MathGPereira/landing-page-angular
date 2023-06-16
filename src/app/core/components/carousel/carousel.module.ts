@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { ControlsComponent } from './controls/controls.component';
+import { ControlsComponent } from './slides/controls/controls.component';
 import { SlidesComponent } from './slides/slides.component';
 
 @NgModule({
