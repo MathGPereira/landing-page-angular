@@ -12,7 +12,7 @@ const routes: Routes = [
         children: [{
             path: '',
             component: SlidesComponent,
-            data: {animation: 'routeAnimations'}
+            data: {animation: 'routeAnimations', src: ''}
         }]
     }
 ];

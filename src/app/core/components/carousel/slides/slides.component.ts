@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
+import { CarouselControlService } from 'src/app/shared/services/carousel-control.service';
 
 
 @Component({
@@ -35,6 +36,8 @@ export class SlidesComponent implements OnInit, OnDestroy {
         }
     ]
 
+    constructor(private carouselService: CarouselControlService) { }
+
     public ngOnInit(): void {
         this.timerInit();
     }
@@ -52,7 +55,7 @@ export class SlidesComponent implements OnInit, OnDestroy {
     }
 
     private timerInit(): void {
-        this.timerSubscription = timer(2000).subscribe(() => {
+        this.timerSubscription = timer(5000).subscribe(() => {
             this.activeImage(this.activeImageIndex + 1)
         });
     }

@@ -1,11 +1,14 @@
 <div>
-    <button id="arrowLeft">
+    <button
+        id="arrowLeft"
+        (click)="changeImage(-1)">
         <fa-icon
             [icon]="fonts.faArrowLeft"
             class="icon"
         ></fa-icon>
     </button>
-    <button>
+    <button
+        (click)='changeImage(1)'>
         <fa-icon
             [icon]="fonts.faArrowRight"
             class="icon"
