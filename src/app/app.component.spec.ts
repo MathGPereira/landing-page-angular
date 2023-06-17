@@ -6,6 +6,7 @@ import { HeaderModule } from './core/components/header/header.module';
 import { CarouselModule } from './core/components/carousel/carousel.module';
 import { ContactButtonComponent } from './shared/components/contact-button/contact-button.component';
 import { CarouselComponent } from './core/components/carousel/carousel.component';
+import { AppRoutingModule } from './app-routing.module';
 
 describe(AppComponent.name, () => {
     let fixture!: ComponentFixture<AppComponent>
@@ -21,7 +22,8 @@ describe(AppComponent.name, () => {
             imports: [
                 HeaderModule,
                 CarouselModule,
-                BrowserAnimationsModule
+                BrowserAnimationsModule,
+                AppRoutingModule
             ]
         }).compileComponents();
 
