@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { opacityAnimations, positionAnimation } from 'src/app/shared/animations/carouselAnimations';
+import { Slide } from 'src/app/shared/interfaces/Slides';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class SlidesComponent {
 
     private _activeImageIndex = 0;
     public state = 'default';
-    public slides = [
+    public slides: Array<Slide> = [
         {
             id: 1,
             src: '../../../../assets/images/slide-1-1339x729.jpg',
