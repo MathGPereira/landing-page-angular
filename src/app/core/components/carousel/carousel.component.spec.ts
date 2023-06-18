@@ -1,11 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterOutlet } from '@angular/router';
 
 import { CarouselComponent } from "./carousel.component";
-import { ControlsComponent } from './slides/controls/controls.component';
-import { SlidesComponent } from './slides/slides.component';
+import { CarouselModule } from './carousel.module';
 
 describe(CarouselComponent.name, () => {
     let fixture!: ComponentFixture<CarouselComponent>;
@@ -13,15 +9,7 @@ describe(CarouselComponent.name, () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [
-                ControlsComponent,
-                SlidesComponent
-            ],
-            imports: [
-                FontAwesomeModule,
-                BrowserAnimationsModule,
-                RouterOutlet
-            ]
+            imports: [CarouselModule]
         }).compileComponents();
 
         fixture = TestBed.createComponent(CarouselComponent);

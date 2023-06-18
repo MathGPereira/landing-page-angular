@@ -45,11 +45,11 @@ export class SlidesComponent {
 
     public changeImage(value: number): void {
         if(value === 1) {
-            (this.activeImageIndex < 2) ? this.activeImageIndex += 1 : this.activeImageIndex = 0;
+            (this.activeImageIndex < this.slides.length - 1) ? this.activeImageIndex += 1 : this.activeImageIndex = 0;
             return;
         }
 
-        (this.activeImageIndex > 0) ? this.activeImageIndex -= 1 : this.activeImageIndex = 2;
+        (this.activeImageIndex > 0) ? this.activeImageIndex -= 1 : this.activeImageIndex = this.slides.length - 1;
         return;
     }
 
