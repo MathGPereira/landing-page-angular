@@ -1,0 +1,116 @@
+@import '../../abstracts/variables';
+
+section {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+    ul {
+        row-gap: 4rem;
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        width: 18%;
+        li {
+            h2 {
+                color: $cor-preto;
+                font-size: 22px;
+                font-weight: 700;
+                padding-bottom: 1rem;
+                text-transform: uppercase;
+                text-align: left;
+            }
+            p {
+                color: #0000007c;
+                font-size: 18px;
+                line-height: 1.6rem;
+            }
+        }
+    }
+    .section__form {
+        box-sizing: border-box;
+        margin-left: 7rem;
+        padding-top: 4rem;
+        width: 40%;
+        h1 {
+            columns: $cor-preto;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 2.7rem;
+            text-transform: uppercase;
+        }
+        p {
+            color: $cor-hover;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 1rem 0 2rem;
+        }
+        form {
+            background-color: $cor-form;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 10px 10px 50px #00000069;
+            font-size: 15px;
+            padding: 3rem 2rem;
+            width: 100%;
+            label {
+                bottom: 4.5rem;
+                color: $cor-branco;
+                display: inline;
+                font-weight: 500;
+                position: relative;
+                transition: opacity .2s linear;
+            }
+            input {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #575757;
+                box-sizing: border-box;
+                color: $cor-branco;
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: .1rem;
+                margin-bottom: 2rem;
+                padding: .5rem 0;
+                outline: none;
+                width: 100%;
+                &:focus-within + label {
+                    opacity: 0;
+                }
+            }
+            button {
+                background-color: $cor-hover;
+                box-sizing: border-box;
+                color: $cor-branco;
+                cursor: pointer;
+                font-size: 15px;
+                font-weight: 700;
+                padding: 1rem 3rem;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .container {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        .image {
+            background: url('../../../../assets/images/animated-background.png') center center / cover;
+            height: 50%;
+            margin: 0 auto;
+            position: absolute;
+            text-align: center;
+            width: 50vw;
+            z-index: -1;
+        }
+    }
+}
