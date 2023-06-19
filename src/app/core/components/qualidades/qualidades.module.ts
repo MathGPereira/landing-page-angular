@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { QualidadesComponent } from './qualidades.component';
-import { FormContactComponent } from 'src/app/shared/components/form-contact/form-contact.component';
+import { FormContactModule } from 'src/app/shared/components/form-contact/form-contact.module';
 
 @NgModule({
     declarations: [
-        QualidadesComponent,
-        FormContactComponent
+        QualidadesComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        FormContactModule
     ],
     exports: [QualidadesComponent]
 })

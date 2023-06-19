@@ -2,9 +2,9 @@
     <ng-container *ngFor="let slide of slides; let i = index">
         <img
             [src]="slide.src"
-            width="1"
-            height="1"
-            style="opacity: 0; position: fixed;"
+            width="1px"
+            height="1px"
+            style="display: none;"
         >
         <img
             @opacityAnimations
@@ -12,8 +12,8 @@
             alt="Exemplo de um design de uma casa que está sendo demonstrada no site"
             *ngIf="i === getActiveImageIndex()"
         >
-        <div 
-            class="article__description" 
+        <div
+            class="article__description"
             *ngIf="i === getActiveImageIndex()">
             <p id="works">54+ works</p>
             <p

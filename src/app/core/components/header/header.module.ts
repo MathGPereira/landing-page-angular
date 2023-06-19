@@ -16,7 +16,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
         CommonModule,
         FontAwesomeModule
     ],
-    exports: [HeaderComponent],
-    providers: []
+    exports: [HeaderComponent]
 })
 export class HeaderModule { }
