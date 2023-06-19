@@ -4,74 +4,7 @@
             Find out the price <br> of your home
         </h1>
         <p>We will contact you within 24 hours</p>
-        <form
-            action=""
-            method="post"
-            autocomplete="on"
-            name="register"
-            id="form"
-            autocapitalize="none"
-            >
-            <fieldset>
-                <input
-                    type="text"
-                    form="form"
-                    id="name"
-                    name="name"
-                    autocapitalize="none"
-                    autocomplete="on"
-                    inputmode="verbatim"
-                    minlength="3"
-                    aria-labelledby="name"
-                    required
-                    tabindex="2"
-                >
-                <label for="name" form="form" name="name" accesskey="n" id="name">Name</label>
-            </fieldset>
-            <fieldset>
-                <input
-                    type="email"
-                    form="form"
-                    id="email"
-                    name="email"
-                    autocapitalize="none"
-                    autocomplete="on"
-                    inputmode="verbatim"
-                    minlength="8"
-                    pattern=""
-                    aria-labelledby="email"
-                    required
-                    tabindex="3"
-                >
-                <label for="email" form="form" name="email" accesskey="e" id="email">Email</label>
-            </fieldset>
-            <fieldset>
-                <input
-                    type="text"
-                    form="form"
-                    id="phone"
-                    name="phone"
-                    autocapitalize="none"
-                    autocomplete="on"
-                    inputmode="numeric"
-                    minlength="11"
-                    maxlength="11"
-                    pattern=""
-                    required
-                    aria-labelledby="name"
-                    required
-                    tabindex="4"
-                >
-                <label for="phone" form="form" name="phone" accesskey="p" id="phone">Phone</label>
-            </fieldset>
-            <button
-                type="submit"
-                form="form"
-                name="submit"
-                tabindex="5"
-                >Submit
-            </button>
-        </form>
+        <app-form-contact></app-form-contact>
     </div>
     <ul>
         <li>

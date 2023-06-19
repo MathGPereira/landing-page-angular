@@ -1,0 +1,49 @@
+@import '../../../abstracts/_variables.scss';
+
+form {
+    background-color: $cor-form;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 50px #00000069;
+    font-size: 15px;
+    padding: 3rem 2rem;
+    width: 100%;
+    label {
+        bottom: 4.5rem;
+        color: $cor-branco;
+        display: inline;
+        font-weight: 500;
+        position: relative;
+        transition: opacity .2s linear;
+    }
+    input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #575757;
+        box-sizing: border-box;
+        color: $cor-branco;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: .1rem;
+        margin-bottom: 2rem;
+        padding: .5rem 0;
+        outline: none;
+        width: 100%;
+        &:focus-within + label {
+            opacity: 0;
+        }
+    }
+    button {
+        background-color: $cor-hover;
+        box-sizing: border-box;
+        color: $cor-branco;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 1rem 3rem;
+        text-transform: uppercase;
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
