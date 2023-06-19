@@ -10,7 +10,6 @@ import { ContactsComponent } from './core/components/contacts/contacts.component
 import { ContactButtonComponent } from './shared/components/contact-button/contact-button.component';
 import { CarouselComponent } from './core/components/carousel/carousel.component';
 import { CarouselModule } from './core/components/carousel/carousel.module';
-import { QualidadesModule } from './core/components/qualidades/qualidades.module';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { QualidadesModule } from './core/components/qualidades/qualidades.module
     FontAwesomeModule,
     BrowserAnimationsModule,
     HeaderModule,
-    CarouselModule,
-    QualidadesModule
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
