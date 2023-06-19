@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { rightBorder, topBorder, bottomBorder, leftBorder } from '../../animations/contactButton';
 
@@ -17,7 +17,17 @@ export class ContactButtonComponent {
 
     mouseOver = false;
 
+    @Input() buttonText!: string;
+
     public changeMouseState(): void {
         this.mouseOver = !this.mouseOver;
+    }
+
+    public backgroundColor(): string {
+        if(!(this.buttonText === 'Contact us')) {
+            return 'background-hover'
+        }
+
+        return 'background-transparent';
     }
 }

@@ -7,8 +7,20 @@ button {
     padding: 1rem 3rem;
     position: relative;
     text-transform: uppercase;
+    transition: all .2s linear;
+    &:hover {
+        background-color: transparent;
+    }
 }
 
 button span {
     position: absolute;
+}
+
+.background-hover {
+    background-color: $cor-hover;
+}
+
+.background-transparent {
+    background-color: transparent;
 }

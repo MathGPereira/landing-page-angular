@@ -1,10 +1,11 @@
 <button
     (mouseover)="changeMouseState()"
     (mouseout)="changeMouseState()"
+    [ngClass]="backgroundColor()"
     >
     <span [@topBorder]="mouseOver ? 'topBorderAnimated' : 'default'"></span>
     <span [@rightBorder]="!mouseOver ? 'rightBorderAnimated' : 'default'"></span>
-    Contact us
+    {{ buttonText }}
     <span [@bottomBorder]="!mouseOver ? 'bottomBorderAnimated' : 'default'"></span>
     <span [@leftBorder]="!mouseOver ? 'leftBorderAnimated' : 'default'"></span>
 </button>

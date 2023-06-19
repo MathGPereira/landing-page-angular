@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
     templateUrl: './form-contact.component.html',
     styleUrls: ['./form-contact.component.scss']
 })
-export class FormContactComponent { }
+export class FormContactComponent {
+
+    text = 'Submit';
+}
