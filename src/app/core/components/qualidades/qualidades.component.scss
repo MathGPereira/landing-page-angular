@@ -60,12 +60,13 @@ section {
         width: 100%;
         z-index: -1;
         .image {
-            background: url('../../../../assets/images/animated-background.png') center center / cover;
-            height: 50%;
+            background: url('../../../../assets/images/animated-background.png') no-repeat center center / cover;
+            height: 70%;
             margin: 0 auto;
             position: absolute;
             text-align: center;
-            width: 50vw;
+            transition: all .3s linear;
+            width: 70%;
             z-index: -1;
         }
     }

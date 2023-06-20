@@ -1,4 +1,7 @@
-<section role="section">
+<section
+    role="section"
+    (mousemove)="changeImagePosition($event)"
+    >
     <div class="section__form">
         <h1 tabindex="1">
             Find out the price <br> of your home
@@ -20,7 +23,13 @@
             <p>Let our team design unique lighting for your home.</p>
         </li>
     </ul>
-    <div class="container">
-        <div class="image"></div>
+    <div
+        class="container"
+        >
+        <div
+            class="image"
+            id="movedBackground"
+            >
+        </div>
     </div>
 </section>
