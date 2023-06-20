@@ -22,6 +22,8 @@
             required
             tabindex="2"
             ngModel
+            #input
+            [ngClass]="contentValidity(input)"
         >
         <label for="name" form="form" name="name" accesskey="n" id="name">Name</label>
         <div
@@ -54,6 +56,8 @@
             required
             tabindex="3"
             ngModel
+            #input
+            [ngClass]="contentValidity(input)"
         >
         <label for="email" form="form" name="email" accesskey="e" id="email">Email</label>
         <div
@@ -92,6 +96,8 @@
             required
             tabindex="4"
             ngModel
+            #input
+            [ngClass]="contentValidity(input)"
         >
         <label for="phone" form="form" name="phone" accesskey="p" id="phone">Phone</label>
         <div

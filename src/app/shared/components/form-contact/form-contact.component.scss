@@ -34,3 +34,7 @@ form {
         }
     }
 }
+
+.full-content + label {
+    opacity: 0;
+}

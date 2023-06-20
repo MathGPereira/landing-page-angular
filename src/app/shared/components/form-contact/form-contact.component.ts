@@ -13,4 +13,12 @@ export class FormContactComponent {
     public cleanForm(form: NgForm): void {
 
     }
+
+    public contentValidity(input: HTMLInputElement): string {
+        if(input.value) {
+            return 'full-content';
+        }
+
+        return '';
+    }
 }
