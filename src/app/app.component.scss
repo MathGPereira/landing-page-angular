@@ -2,7 +2,7 @@
 
 .main {
     align-items: center;
-    background: url('../assets/images/bg-image-1.jpg');
+    background: url('../assets/images/bg-image-1.jpg') center center / cover;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;

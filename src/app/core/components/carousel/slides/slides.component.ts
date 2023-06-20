@@ -20,21 +20,21 @@ export class SlidesComponent {
     public slides: Array<Slide> = [
         {
             id: 1,
-            src: '../../../../assets/images/slide-1-1339x729.jpg',
+            src: '../../../../../assets/images/slide-1-1339x729.png',
             firstDescription: '2750 duffy st',
             secondDescription: '200 sq. m.',
             thirdDescription: '$ 240.000'
         },
         {
             id: 2,
-            src: '../../../../assets/images/slide-2-1339x729.jpg',
+            src: '../../../../assets/images/slide-2-1339x729.png',
             firstDescription: '5032 hewes ave',
             secondDescription: '290 sq. m.',
             thirdDescription: '$ 390.000'
         },
         {
             id: 3,
-            src: '../../../../assets/images/slide-3-1339x729.jpg',
+            src: '../../../../assets/images/slide-3-1339x729.png',
             firstDescription: '2239 wilmar farm rd',
             secondDescription: '350 sq. m.',
             thirdDescription: '$ 340.000'
