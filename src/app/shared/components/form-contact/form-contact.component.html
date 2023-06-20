@@ -5,6 +5,8 @@
     name="register"
     id="form"
     autocapitalize="none"
+    #f="ngForm"
+    (ngSubmit)="cleanForm(f)"
     >
     <fieldset>
         <input
@@ -15,12 +17,27 @@
             autocapitalize="none"
             autocomplete="on"
             inputmode="verbatim"
-            minlength="3"
             aria-labelledby="name"
+            minlength="3"
             required
             tabindex="2"
+            ngModel
         >
         <label for="name" form="form" name="name" accesskey="n" id="name">Name</label>
+        <div
+            *ngIf="(f.controls['name']?.invalid && f.controls['name']?.touched) || f.controls['name']?.dirty"
+            >
+            <app-error-message
+                *ngIf="f.controls['name']?.errors?.['required']"
+                error="The text field is required"
+                >
+            </app-error-message>
+            <app-error-message
+                *ngIf="f.controls['name']?.errors?.['minlength']"
+                error="The text must have at least 3 characters"
+                >
+            </app-error-message>
+        </div>
     </fieldset>
     <fieldset>
         <input
@@ -32,12 +49,32 @@
             autocomplete="on"
             inputmode="verbatim"
             minlength="8"
-            pattern=""
+            pattern="^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$"
             aria-labelledby="email"
             required
             tabindex="3"
+            ngModel
         >
         <label for="email" form="form" name="email" accesskey="e" id="email">Email</label>
+        <div
+            *ngIf="(f.controls['email']?.invalid && f.controls['email']?.touched) || f.controls['email']?.dirty"
+            >
+            <app-error-message
+                *ngIf="f.controls['email']?.errors?.['required']"
+                error="The text field is required"
+                >
+            </app-error-message>
+            <app-error-message
+                *ngIf="f.controls['email']?.errors?.['minlength']"
+                error="The text must have at least 8 characters"
+                >
+            </app-error-message>
+            <app-error-message
+                *ngIf="f.controls['email']?.errors?.['pattern']"
+                error="The text must have the format name@dominio.com"
+                >
+            </app-error-message>
+        </div>
     </fieldset>
     <fieldset>
         <input
@@ -50,13 +87,32 @@
             inputmode="numeric"
             minlength="11"
             maxlength="11"
-            pattern=""
-            required
-            aria-labelledby="name"
+            pattern="(\(\d{2}\)\s?)(\d{5}\-?\d{4})"
+            aria-labelledby="phone"
             required
             tabindex="4"
+            ngModel
         >
         <label for="phone" form="form" name="phone" accesskey="p" id="phone">Phone</label>
+        <div
+            *ngIf="(f.controls['phone']?.invalid && f.controls['phone']?.touched) || f.controls['phone']?.dirty"
+            >
+            <app-error-message
+                *ngIf="f.controls['phone']?.errors?.['required']"
+                error="The text field is required"
+                >
+            </app-error-message>
+            <app-error-message
+                *ngIf="f.controls['phone']?.errors?.['minlength']"
+                error="The text must have at least 11 characters"
+                >
+            </app-error-message>
+            <app-error-message
+                *ngIf="f.controls['phone']?.errors?.['pattern']"
+                error="(16)999999999"
+                >
+            </app-error-message>
+        </div>
     </fieldset>
     <app-contact-button
         [buttonText]="text"

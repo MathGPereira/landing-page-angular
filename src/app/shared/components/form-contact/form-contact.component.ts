@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-form-contact',
@@ -8,4 +9,8 @@ import { Component } from '@angular/core';
 export class FormContactComponent {
 
     text = 'Submit';
+
+    public cleanForm(form: NgForm): void {
+
+    }
 }
