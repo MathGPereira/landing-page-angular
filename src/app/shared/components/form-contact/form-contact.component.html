@@ -22,8 +22,8 @@
             required
             tabindex="2"
             ngModel
-            #input
-            [ngClass]="contentValidity(input)"
+            #inputName
+            [ngClass]="contentValidity(inputName)"
         >
         <label for="name" form="form" name="name" accesskey="n" id="name">Name</label>
         <div
@@ -56,8 +56,8 @@
             required
             tabindex="3"
             ngModel
-            #input
-            [ngClass]="contentValidity(input)"
+            #inputEmail
+            [ngClass]="contentValidity(inputEmail)"
         >
         <label for="email" form="form" name="email" accesskey="e" id="email">Email</label>
         <div
@@ -89,15 +89,15 @@
             autocapitalize="none"
             autocomplete="on"
             inputmode="numeric"
-            minlength="11"
-            maxlength="11"
+            minlength="13"
+            maxlength="13"
             pattern="(\(\d{2}\)\s?)(\d{5}\-?\d{4})"
             aria-labelledby="phone"
             required
             tabindex="4"
             ngModel
-            #input
-            [ngClass]="contentValidity(input)"
+            #inputPhone
+            [ngClass]="contentValidity(inputPhone)"
         >
         <label for="phone" form="form" name="phone" accesskey="p" id="phone">Phone</label>
         <div
