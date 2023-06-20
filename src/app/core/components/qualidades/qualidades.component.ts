@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class QualidadesComponent {
 
+    public mouseState = false;
+
     public changeImagePosition(event: MouseEvent): void {
         const backgroundImage: HTMLDivElement = <HTMLDivElement>document.querySelector("#movedBackground");
 
-        backgroundImage.style.backgroundPositionX = -(event.offsetX) / 10 + 'px';
-        backgroundImage.style.backgroundPositionY = -(event.offsetY) / 10 + 'px';
+        backgroundImage.style.backgroundPositionX = -(event.offsetX) / 15 + 'px';
+        backgroundImage.style.backgroundPositionY = -(event.offsetY) / 15 + 'px';
     }
 }
