@@ -13,7 +13,7 @@ import { QualidadesModule } from './core/components/qualidades/qualidades.module
 import { HowWeDoComponent } from './core/components/how-we-do/how-we-do.component';
 import { OurTeamComponent } from './core/components/our-team/our-team.component';
 import { TeamComponent } from './core/components/our-team/team/team.component';
-import { ArchitectureCompanyComponent } from './core/components/architecture-company/architecture-company.component';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +22,7 @@ import { ArchitectureCompanyComponent } from './core/components/architecture-com
         HowWeDoComponent,
         OurTeamComponent,
         TeamComponent,
-        ArchitectureCompanyComponent
+        FooterComponent
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,35 @@
+@import '../../abstracts/variables';
+
+footer {
+    background: url('../../../../assets/images/bg-image-1.jpg') no-repeat center center / cover;
+    box-sizing: border-box;
+    padding: 5rem 4rem;
+    text-align: center;
+    h2 {
+        cursor: pointer;
+    }
+    div {
+        margin: 2rem 0;
+        padding: 1rem 0;
+        width: auto;
+        span {
+            color: $cor-branco;
+            display: block;
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+            width: auto;
+        }
+    }
+    ul {
+        align-items: center;
+        column-gap: 1rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+    .copyrigth {
+        color: $cor-branco;
+    }
+}
