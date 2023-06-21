@@ -13,6 +13,7 @@ import { QualidadesModule } from './core/components/qualidades/qualidades.module
 import { HowWeDoComponent } from './core/components/how-we-do/how-we-do.component';
 import { OurTeamComponent } from './core/components/our-team/our-team.component';
 import { TeamComponent } from './core/components/our-team/team/team.component';
+import { ArchitectureCompanyComponent } from './core/components/architecture-company/architecture-company.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { TeamComponent } from './core/components/our-team/team/team.component';
         CarouselComponent,
         HowWeDoComponent,
         OurTeamComponent,
-        TeamComponent
+        TeamComponent,
+        ArchitectureCompanyComponent
     ],
     imports: [
         BrowserModule,
