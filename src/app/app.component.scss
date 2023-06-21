@@ -43,3 +43,40 @@ main {
     max-width: 100vw;
     overflow: hidden;
 }
+
+app-how-we-do {
+    p {
+        color: gray;
+        font-weight: 500;
+        line-height: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        color: $cor-hover;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    #secondTitle {
+        margin-bottom: 1.5rem;
+    }
+    div {
+        border-radius: 5px;
+        box-sizing: border-box;
+        height: 80%;
+        padding: 1rem;
+        width: 90%;
+    }
+    .image1 {
+        background: url('../assets/images/index-1-531x327.png') no-repeat center center / cover;
+    }
+    .image2 {
+        background: url('../assets/images/index-2-531x327.png') no-repeat center center / cover;
+    }
+    .image3 {
+        background: url('../assets/images/index-3-531x327.png') no-repeat center center / cover;
+    }
+    .image4 {
+        background: url('../assets/images/index-4-531x327.png') no-repeat center center / cover;
+    }
+}

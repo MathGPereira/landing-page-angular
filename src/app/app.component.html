@@ -13,6 +13,15 @@
 </section>
 <main>
     <app-qualidades></app-qualidades>
-    <app-how-we-do></app-how-we-do>
+    <app-how-we-do>
+        <h2 id="secondTitle" title>{{ firstExample.title }}</h2>
+        <p description>
+            {{ firstExample.firstDescription }}
+        </p>
+        <p description>
+            {{ firstExample.secondDescription }}
+        </p>
+        <div image class="{{ firstExample.image }}"></div>
+    </app-how-we-do>
 </main>
 

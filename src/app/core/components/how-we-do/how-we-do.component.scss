@@ -1,0 +1,59 @@
+@import '../../abstracts/variables';
+
+section {
+    background: url('../../../../assets/images/bg-image-1.jpg') no-repeat center center / cover;
+    box-sizing: border-box;
+    column-gap: 6rem;
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, 50%);
+    padding: 7rem;
+    h1 {
+        color: $cor-branco;
+        font-size: 60px;
+        padding: 1.5rem 0 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    #firstTitle {
+        color: $cor-hover;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    ul {
+        box-sizing: border-box;
+        color: gray;
+        column-gap: 2rem;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        row-gap: 2rem;
+        text-transform: uppercase;
+        li {
+            box-sizing: border-box;
+            width: calc(50% - 2rem);
+        }
+        li:nth-child(1)::before {
+            content: '01';
+            margin-right: .3rem;
+        }
+        li:nth-child(2)::before {
+            content: '02';
+            margin-right: .3rem;
+        }
+        li:nth-child(3)::before {
+            content: '03';
+            margin-right: .3rem;
+        }
+        li:nth-child(4)::before {
+            content: '04';
+            margin-right: .3rem;
+        }
+        li:hover {
+            color: $cor-branco;
+        }
+    }
+}
