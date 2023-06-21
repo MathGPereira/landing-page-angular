@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-how-we-do',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HowWeDoComponent {
 
+    @Output() id = new EventEmitter();
+
+    public changeId(id: number): void {
+        this.id.emit(id);
+    }
 }

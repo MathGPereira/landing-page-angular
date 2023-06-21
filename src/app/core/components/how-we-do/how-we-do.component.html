@@ -7,10 +7,22 @@
     </div>
     <div>
         <ul>
-            <li>Acquaintance with the customer</li>
-            <li>Project concept development</li>
-            <li>Working in exterior and interior</li>
-            <li>Finishing touches for your future home</li>
+            <li
+                (click)="changeId(1)">
+                Acquaintance with the customer
+            </li>
+            <li
+                (click)="changeId(2)">
+                Project concept development
+            </li>
+            <li
+                (click)="changeId(3)">
+                Working in exterior and interior
+            </li>
+            <li
+                (click)="changeId(4)">
+                Finishing touches for your future home
+            </li>
         </ul>
         <ng-content select="[image]"></ng-content>
     </div>

@@ -38,19 +38,19 @@ section {
         }
         li:nth-child(1)::before {
             content: '01';
-            margin-right: .3rem;
+            margin-right: 1rem;
         }
         li:nth-child(2)::before {
             content: '02';
-            margin-right: .3rem;
+            margin-right: 1rem;
         }
         li:nth-child(3)::before {
             content: '03';
-            margin-right: .3rem;
+            margin-right: 1rem;
         }
         li:nth-child(4)::before {
             content: '04';
-            margin-right: .3rem;
+            margin-right: 1rem;
         }
         li:hover {
             color: $cor-branco;

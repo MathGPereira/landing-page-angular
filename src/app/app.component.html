@@ -13,15 +13,29 @@
 </section>
 <main>
     <app-qualidades></app-qualidades>
-    <app-how-we-do>
-        <h2 id="secondTitle" title>{{ firstExample.title }}</h2>
-        <p description>
-            {{ firstExample.firstDescription }}
+    <app-how-we-do
+        (id)="changeId($event)"
+        >
+        <h2
+            id="secondTitle"
+            title
+            >
+            {{ howWeDo[activeId - 1].title }}
+        </h2>
+        <p
+            description
+            >
+            {{ howWeDo[activeId - 1].firstDescription }}
         </p>
-        <p description>
-            {{ firstExample.secondDescription }}
+        <p
+            description
+            >
+            {{ howWeDo[activeId - 1].secondDescription }}
         </p>
-        <div image class="{{ firstExample.image }}"></div>
+        <div
+            image
+            class="{{ howWeDo[activeId - 1].image }}"
+            >
+        </div>
     </app-how-we-do>
 </main>
-
