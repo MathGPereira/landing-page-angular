@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-team',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TeamComponent {
 
+    @Input() src!: string;
+    @Input() name!: string;
+    @Input() function!: string;
 }

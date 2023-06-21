@@ -2,9 +2,15 @@
     <h1>Our team</h1>
     <p>People behind our success</p>
     <div>
-        <app-team></app-team>
-        <app-team></app-team>
-        <app-team></app-team>
-        <app-team></app-team>
+        <ng-container
+            *ngFor="let person of team"
+            >
+            <app-team
+                [src]="person.img"
+                [name]="person.name"
+                [function]="person.function"
+                >
+            </app-team>
+        </ng-container>
     </div>
 </section>
