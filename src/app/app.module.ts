@@ -11,12 +11,14 @@ import { CarouselModule } from './core/components/carousel/carousel.module';
 import { ContactButtonModule } from './shared/components/contact-button/contact-button.module';
 import { QualidadesModule } from './core/components/qualidades/qualidades.module';
 import { HowWeDoComponent } from './core/components/how-we-do/how-we-do.component';
+import { OurTeamComponent } from './core/components/our-team/our-team.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         CarouselComponent,
-        HowWeDoComponent
+        HowWeDoComponent,
+        OurTeamComponent
     ],
     imports: [
         BrowserModule,
