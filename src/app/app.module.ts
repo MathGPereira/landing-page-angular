@@ -12,13 +12,15 @@ import { ContactButtonModule } from './shared/components/contact-button/contact-
 import { QualidadesModule } from './core/components/qualidades/qualidades.module';
 import { HowWeDoComponent } from './core/components/how-we-do/how-we-do.component';
 import { OurTeamComponent } from './core/components/our-team/our-team.component';
+import { TeamComponent } from './core/components/our-team/team/team.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         CarouselComponent,
         HowWeDoComponent,
-        OurTeamComponent
+        OurTeamComponent,
+        TeamComponent
     ],
     imports: [
         BrowserModule,

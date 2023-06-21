@@ -1,0 +1,17 @@
+@import '../../../../core/abstracts/variables';
+
+article {
+    box-sizing: border-box;
+    width: calc(25% - 6rem);
+    p {
+        background-color: $cor-branco;
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+        ul {
+            align-items: center;
+            display: flex;
+        }
+    }
+}
